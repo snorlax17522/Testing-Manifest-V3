@@ -1,0 +1,20 @@
+{
+    "manifest_version": 3,
+    "description": "Base Level Extension Testing M3",
+    "version": "0.0.1",
+    "name": "Testing M3",
+    "content_scripts":[
+        {
+            "matches": [ "https://music.youtube.com/*" ],
+            "js": ["content.js"],
+             "run_at": "document_start"
+        }
+    ],
+    "background": {
+      "service_worker": "service-worker.js",
+      "type": "module"
+    },
+    "permissions": [
+    "tabs"
+  ]
+}
